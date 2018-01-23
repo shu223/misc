@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="TTMCountingLabelExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7m-T3-Lry" customClass="TTMCountingLabel">
+                                <rect key="frame" x="135.66666666666666" y="333" width="104" height="82"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ijq-fh-0xt">
+                                <rect key="frame" x="154" y="716" width="67" height="42"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="START">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startBtnTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MpO-bU-hr9"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="yuD-v7-COC">
+                                <rect key="frame" x="115" y="672" width="207" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easing Rate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieV-E9-LCd">
+                                <rect key="frame" x="16" y="676" width="85" height="22"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4um-pU-OEr">
+                                <rect key="frame" x="336" y="676" width="23" height="22"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yuD-v7-COC" firstAttribute="centerY" secondItem="ieV-E9-LCd" secondAttribute="centerY" id="6ia-RI-jRk"/>
+                            <constraint firstItem="yuD-v7-COC" firstAttribute="leading" secondItem="ieV-E9-LCd" secondAttribute="trailing" constant="16" id="9re-Gp-oot"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Ijq-fh-0xt" secondAttribute="bottom" constant="20" id="E2c-9m-IWW"/>
+                            <constraint firstAttribute="centerX" secondItem="r7m-T3-Lry" secondAttribute="centerX" id="Fig-Sz-yFn"/>
+                            <constraint firstItem="ieV-E9-LCd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="KTS-mE-CBl"/>
+                            <constraint firstItem="ieV-E9-LCd" firstAttribute="centerY" secondItem="4um-pU-OEr" secondAttribute="centerY" id="NDQ-HP-RaM"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ieV-E9-LCd" secondAttribute="bottom" constant="80" id="bpn-e3-ojb"/>
+                            <constraint firstAttribute="trailing" secondItem="4um-pU-OEr" secondAttribute="trailing" constant="16" id="eQu-1S-DUc"/>
+                            <constraint firstAttribute="centerX" secondItem="Ijq-fh-0xt" secondAttribute="centerX" id="gRm-tZ-BW1"/>
+                            <constraint firstAttribute="centerY" secondItem="r7m-T3-Lry" secondAttribute="centerY" constant="32" id="oeK-q7-8ra"/>
+                            <constraint firstItem="4um-pU-OEr" firstAttribute="leading" secondItem="yuD-v7-COC" secondAttribute="trailing" constant="16" id="y3S-Dc-EmH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countingLabel" destination="r7m-T3-Lry" id="Qb9-SX-O0p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
