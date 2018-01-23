@@ -1,6 +1,6 @@
 # misc
 
-##TTMCircleLayout
+## TTMCircleLayout
 
 Circular layout class for UICollectionView.
 
@@ -23,8 +23,11 @@ Just set in IB as the Custom Layout Class.
 <img src="images/circlelayout3.png" width="240">
 
 
-##TTMCountingLabel
+## TTMCountingLabel
 
 - Modified from [UICountingLabel](https://github.com/dataxpress/UICountingLabel)
 - Enabled to customize `easingRate` property.
 
+## TTMAnimatedCalendar
+
+<img src="images/TTMCalendar2.gif">
