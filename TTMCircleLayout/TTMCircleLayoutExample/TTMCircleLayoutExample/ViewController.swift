@@ -3,7 +3,7 @@
 //  TTMCircleLayoutExample
 //
 //  Created by Shuichi Tsutsumi on 2015/03/12.
-//  Copyright (c) 2015年 Shuichi Tsutsumi. All rights reserved.
+//  Copyright (c) 2015 Shuichi Tsutsumi. All rights reserved.
 //
 
 import UIKit
@@ -23,15 +23,22 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     // =========================================================================
     // MARK: - UICollectionViewataSource
 
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
 
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as CircleCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CircleCell
         
         return cell
+    }
+    
+    
+    // =========================================================================
+    // MARK: - UICollectionViewDelegate
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     }
 }
 
